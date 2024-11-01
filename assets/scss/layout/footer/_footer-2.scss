@@ -1,0 +1,173 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.2 Footer Style 2
+/*----------------------------------------*/
+
+.#{$theme-prifix}-footer {
+    &-3 {
+        &-wrapp {
+            padding-top: 33px;
+            padding-bottom: 33px;
+            padding-left: 100px;
+            padding-right: 100px;
+            background: #314554;
+            border-radius: 50px;
+
+            @media #{$md} {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @media #{$sm,$xs} {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @media #{$xs} {
+                padding-bottom: 0;
+            }
+        }
+
+        &-menu {
+            & ul {
+                & li {
+                    display: inline-block;
+                    margin: 0 25px;
+
+                    @media #{$lg} {
+                        margin: 0 15px;
+                    }
+
+                    @media #{$md} {
+                        margin: 0 4px;
+                        text-align: left;
+                    }
+
+                    @media #{$sm,$xs} {
+                        margin: 0;
+                        display: block;
+                        margin-bottom: 6px;
+                    }
+
+                    & a {
+                        position: relative;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 44px 0;
+                        color: var(--tp-text-body-2);
+                        @include tp-transition();
+
+                        @media #{$lg} {
+                            padding: 36px 0;
+                        }
+
+                        @media #{$md} {
+                            padding: 40px 0;
+                        }
+
+                        @media #{$sm,$xs} {
+                            padding: 0 0;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            bottom: 0;
+                            left: 0;
+                            content: "";
+                            opacity: 0;
+                            visibility: hidden;
+                            background: var(--tp-common-white);
+                            @include tp-transition();
+                        }
+
+                        &:hover {
+                            color: var(--tp-common-white);
+
+                            &::after {
+                                width: 100%;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-social {
+            & a {
+                font-size: 16px;
+                margin-right: 20px;
+                @include tp-transition();
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @media #{$xl} {
+                    margin-right: 15px;
+                }
+
+                @media #{$lg} {
+                    margin-right: 6px;
+                }
+
+                @media #{$md} {
+                    margin-right: 4px;
+                }
+
+                &:hover {
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+
+    &-widget {
+        &.footer {
+            &-col {
+                &-3 {
+                    &-1 {
+                        @media #{$sm,$xs} {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    &-2 {
+                        @media #{$sm,$xs} {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-large {
+    width: 1370px;
+    margin: auto;
+
+    @media #{$xl} {
+        width: 1170px;
+    }
+
+    @media #{$lg} {
+        width: 940px;
+    }
+
+    @media #{$md} {
+        width: 740px;
+    }
+
+    @media #{$sm} {
+        width: 550px;
+    }
+
+    @media #{$xs} {
+        width: 320px;
+    }
+}

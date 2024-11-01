@@ -1,0 +1,108 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4 Header Style 4
+/*----------------------------------------*/
+
+.#{$theme-prifix}-header {
+    &-4 {
+        &-one-page {
+            & .tp-main-menu>nav>ul>li {
+                margin-right: 65px;
+
+                @media #{$x3l} {
+                    margin-right: 45px;
+                }
+
+                @media #{$xxl} {
+                    margin-right: 35px;
+                }
+
+                @media #{$xl} {
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        &.tp-footer-style-plr{
+            @media #{$sm} {
+                padding-bottom: 80px;
+            }
+        }
+    }
+
+    &-5 {
+        & .tp-header {
+            &-top {
+                &-wrapp {
+                    border: 0;
+                }
+            }
+
+            &-info {
+                padding: 24px 0;
+
+                @media #{$md,$sm,$xs} {
+                    padding: 15px 0;
+                }
+
+                &-btn {
+                    & .tp-theme-btn {
+                        &:hover {
+                            color: var(--tp-common-black);
+                            background: var(--tp-common-white);
+
+                            @media #{$md,$sm,$xs} {
+                                color: var(--tp-common-white);
+                                background: var(--tp-common-black);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .tp-main-menu {
+            &>nav {
+                &>ul {
+                    &>li {
+                        &>a {
+                            padding: 26px 0;
+                        }
+                    }
+                }
+            }
+
+            &-bars {
+                margin-top: 0;
+
+                @media #{$xs} {
+                    margin-top: 0;
+                }
+
+                & button {
+                    color: var(--tp-common-white);
+                    background-color: var(--tp-common-black);
+
+                    &:hover {
+                        color: var(--tp-common-white);
+                        background-color: var(--tp-theme-1);
+                    }
+                }
+            }
+
+        }
+
+        &-one-page {
+            & .tp-main-menu>nav>ul>li {
+                margin-right: 65px;
+                @media #{$xl} {
+                    margin-right: 60px;
+                }
+                @media #{$lg} {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+}

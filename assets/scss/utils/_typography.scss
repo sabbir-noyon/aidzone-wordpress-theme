@@ -1,0 +1,24 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Manrope', sans-serif",
+        'heading': "'Manrope', sans-serif",
+        'p': "'Manrope', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 14px,
+        'p': 16px,
+    )
+);
+
+

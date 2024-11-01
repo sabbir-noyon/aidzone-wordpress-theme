@@ -1,0 +1,194 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 price css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-price {
+    &-action {
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 50px;
+        }
+
+        & .tp-theme-btn {
+            padding: 16px 42px;
+            color: var(--tp-common-black);
+
+            &:hover {
+                color: var(--tp-common-white);
+            }
+        }
+    }
+
+    &-item {
+        padding: 53px 60px 45px 60px;
+        border-radius: 15px;
+        background: var(--tp-common-white);
+        border: 1px solid var(--tp-border-1);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 60px 0px rgba(24, 21, 51, 0.08);
+
+        @media #{$lg} {
+            margin-bottom: 20px;
+        }
+
+        @media #{$md} {
+            padding: 45px;
+            margin-bottom: 20px;
+        }
+
+        @media #{$xs} {
+            padding: 45px;
+            margin-bottom: 20px;
+        }
+
+        @media #{$sm} {
+            margin-bottom: 20px;
+            padding: 53px 60px 45px 60px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+
+        &.active {
+            & .tp-price-btn {
+                background: var(--tp-theme-1);
+            }
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 30px;
+
+        &-box {
+            & .tp-section-title {
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+
+                @media #{$sm} {
+                    font-size: 50px;
+                }
+            }
+
+            & p {
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &-value {
+        position: relative;
+        font-weight: 700;
+        font-size: 50px;
+
+        & span {
+            position: absolute;
+            font-weight: 700;
+            font-size: 30px;
+            top: 5px;
+            left: -17px;
+        }
+
+        &-box {
+            margin-left: 30px;
+        }
+    }
+
+    &-categories {
+        font-size: 16px;
+        text-align: left;
+        margin-left: 12px;
+        line-height: 1.7;
+
+        &-list {
+            &.price-list-3 {
+                & span {
+                    color: var(--tp-common-black);
+
+                    & i {
+                        color: var(--tp-common-black);
+                    }
+                }
+            }
+        }
+    }
+
+    &-btn {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 20px 0px;
+        display: inline-block;
+        color: var(--tp-common-white);
+        background: var(--tp-common-black);
+        border-radius: 15px;
+        @include tp-transition();
+
+        &:hover {
+            color: var(--tp-common-white);
+            background: var(--tp-theme-1);
+        }
+    }
+
+    &-categories {
+        &-list {
+            & ul {
+                & li {
+                    position: relative;
+                    font-size: 16px;
+                    font-weight: 500;
+                    list-style: none;
+                    padding-left: 24px;
+                    padding-bottom: 15px;
+                    margin-bottom: 13px;
+                    color: var(--tp-common-black);
+                    border-bottom: 1px solid var(--tp-border-1);
+
+                    & i {
+                        position: absolute;
+                        top: 7px;
+                        left: 0;
+                    }
+
+                    & span {
+                        color: var(--tp-text-body);
+                        margin-bottom: 0;
+
+                        & i {
+                            color: var(--tp-theme-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-inner {
+        &-plr {
+            padding-bottom: 260px;
+
+            @media #{$sm} {
+                padding-bottom: 180px;
+            }
+
+            @media #{$xs} {
+                padding-bottom: 120px;
+            }
+        }
+
+        & .tp-price {
+            &-item {
+                @media #{$lg} {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+.header {
+    &-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        width: 100%;
+        z-index: 99;
+        visibility: visible;
+        background-color: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        -webkit-animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+        -khtml-animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+        -moz-animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+        -ms-animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+        -o-animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+        animation: .95s ease 0s normal forwards 1 running headerSlideDown;
+
+    }
+
+}
+
+.#{$theme-prifix}-header {
+    &-top {
+        &-wrapp {
+            border-bottom: 1px solid var(--tp-border-1);
+
+            @media #{$md,$sm,$xs} {
+                border: none;
+            }
+        }
+    }
+
+    &-shape {
+        &-1 {
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            animation: spin-1 3000ms forwards infinite alternate;
+            transform-origin: bottom right;
+
+            @media #{$x4l} {
+                right: 7%;
+            }
+
+            @media #{$x3l} {
+                right: 5%;
+                bottom: 14px;
+            }
+
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &-info {
+        padding: 30px 0;
+
+        @media #{$md,$sm,$xs} {
+            padding: 15px 0;
+        }
+
+        &-item {
+            &:hover {
+                & .tp-header {
+                    &-info {
+                        &-icon {
+                            color: var(--tp-common-white);
+                            background: var(--tp-common-black);
+                            animation: icon-bounce 0.8s ease-out infinite;
+                        }
+
+                        &-text {
+                            & span {
+                                color: var(--tp-theme-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & ul {
+            & li {
+                list-style: none;
+                padding-right: 30px;
+                margin-right: 25px;
+                display: inline-block;
+                border-right: 1px solid var(--tp-border-1);
+
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+
+        &-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            line-height: 55px;
+            text-align: center;
+            color: var(--tp-common-white);
+            display: inline-block;
+            background: var(--tp-theme-1);
+            border-radius: 50%;
+            margin-right: 14px;
+            @include tp-transition;
+        }
+
+        &-text {
+            & span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--tp-common-black);
+            @include tp-transition();
+        }
+    }
+
+    &-bottom-right {
+        @media #{$md,$sm,$xs} {
+            padding: 10px 0;
+        }
+
+        & ul {
+            & li {
+                display: inline-block;
+                margin-left: 25px;
+            }
+        }
+    }
+
+    &-icon {
+        & button {
+            & span {
+                font-size: 23px;
+                display: inline-block;
+                color: #223645;
+                margin-top: 10px;
+                @include tp-transition();
+
+                &:hover {
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+
+        & a {
+            font-size: 23px;
+            display: inline-block;
+            color: var(--tp-common-black);
+            margin-bottom: 0;
+            @include tp-transition();
+
+            &:hover {
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+
+    &-1 {
+        &-one-page {
+            & .tp-main-menu>nav>ul>li {
+                @media #{$lg} {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.22 Text-slider css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-text-slider {
+    &-text {
+        font-weight: 600;
+        font-size: 140px;
+        color: rgba(34, 54, 69, 0.059);
+        margin-bottom: 0;
+    }
+
+    &-subtitle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 26%;
+        text-align: center;
+
+        & h3 {
+            font-weight: 600;
+            font-size: 48px;
+            color: var(--tp-theme-1);
+            letter-spacing: -1.5px;
+
+            @media #{$sm,$xs} {
+                font-size: 40px;
+            }
+        }
+
+        @media #{$md,$sm} {
+            top: 36%;
+        }
+    }
+
+    &-active {
+        & .swiper-slide {
+            width: auto;
+        }
+    }
+
+    &-1 {
+        @media #{$md,$sm,$xs} {
+            padding-bottom: 80px;
+        }
+    }
+}
+
+.slide-transtion {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}

@@ -1,0 +1,116 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 Award css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-award {
+    &-title {
+        font-size: 24px;
+        font-weight: 700;
+
+        @media #{$xs} {
+            font-size: 18px;
+        }
+
+        @media #{$sm} {
+            font-size: 24px;
+        }
+    }
+
+    &-icon {
+        & span {
+            font-size: 55px;
+            display: inline-block;
+            color: var(--tp-theme-1);
+            margin-right: 30px;
+
+            @media #{$xs} {
+                margin-right: 14px;
+            }
+        }
+
+    }
+
+    &-text {
+        & p {
+            font-weight: 500;
+        }
+    }
+
+    &-2 {
+        &-item {
+            text-align: center;
+            height: 212px;
+            padding: 35px 0 15px 0;
+            border-radius: 15px;
+            border: 1px solid var(--tp-border-1);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 10px 60px 0px rgba(20, 17, 49, 0.08);
+
+            @media #{$md,$sm,$xs} {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-title-box {
+            @media #{$sm,$xs} {
+                margin-bottom: 30px;
+            }
+            & .tp-section-title {
+                @media #{$xs} {
+                    font-size: 35px;
+                }
+
+            }
+
+            & p {
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            margin-bottom: 35px;
+
+            & img {
+                width: auto;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            padding-top: 12px;
+            border-top: 1px solid var(--tp-border-1);
+
+            & p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-3 {
+        &-action {
+            @media #{$lg,$md,$sm,$xs} {
+                margin-bottom: 30px;
+                float: right!important;
+            }
+
+            & a {
+                background-color: var(--tp-common-black);
+
+                &:hover {
+                    background-color: var(--tp-theme-1);
+                }
+            }
+
+            @media #{$xs} {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}

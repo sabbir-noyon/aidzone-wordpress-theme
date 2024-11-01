@@ -1,0 +1,64 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.7 Pagination
+/*----------------------------------------*/
+
+.basic-pagination {
+    & ul {
+        & li {
+            display: inline-block;
+            margin-right: 8px;
+
+            & a {
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                display: block;
+                color: var(--tp-common-black);
+                background: var(--tp-grey-1);
+                border-radius: 50%;
+                @include tp-transition();
+
+                &:hover {
+                    color: var(--tp-common-white);
+                    background: var(--tp-common-black);
+                }
+
+                & .current {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 200px;
+                    display: inline-block;
+                    color: var(--tp-common-white);
+                    background: var(--tp-common-black);
+                }
+            }
+        }
+    }
+
+    @media #{$md,$sm,$xs} {
+        padding-bottom: 80px;
+    }
+}
+
+.tp-pagination {
+    &-number {
+        & span {
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 60px;
+            display: block;
+            opacity: 1;
+            text-align: center;
+            color: var(--tp-common-white);
+            background: transparent;
+
+            &.swiper-pagination-bullet-active {
+                background: #030024;
+            }
+        }
+    }
+}

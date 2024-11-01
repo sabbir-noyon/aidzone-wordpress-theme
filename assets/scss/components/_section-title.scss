@@ -1,0 +1,51 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.11 Section Title
+/*----------------------------------------*/
+
+.#{$theme-prifix}-section {
+    &-title {
+        font-weight: 800;
+        font-size: 50px;
+        display: inline-block;
+        letter-spacing: -2px;
+        color: var(--tp-common-black);
+
+        @media #{$sm} {
+            font-size: 35px;
+        }
+
+        @media #{$xs} {
+            letter-spacing: -1px;
+        }
+    }
+
+    &-subtitle {
+        font-weight: 700;
+        font-size: 16px;
+        display: block;
+        color: var(--tp-theme-1);
+        margin-bottom: 10px;
+
+        &.tp-subtitle-2 {
+            display: inline-block;
+            padding: 2px 10px;
+            color: var(--tp-common-white);
+            background: #030024;
+            border-radius: 30px;
+        }
+    }
+}
+
+.#{$theme-prifix}-title-hover {
+    background-size: 0% 1px, 0 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s linear;
+    background-position: 100% 100%, 0 93%;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+
+    &:hover {
+        background-size: 0 1px, 100% 1px;
+    }
+}

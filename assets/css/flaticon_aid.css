@@ -1,0 +1,218 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_aid";
+    src: url("../fonts/flaticon_aid.eot") format("eot"),
+        url("../fonts/flaticon_aid.ttf") format("ttf"),
+        url("../fonts/flaticon_aid.woff") format("woff"),
+        url("../fonts/flaticon_aid.woff2") format("woff2")
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon_aid !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-search:before {
+    content: "\f101";
+}
+
+.flaticon-mail:before {
+    content: "\f102";
+}
+
+.flaticon-house:before {
+    content: "\f103";
+}
+
+.flaticon-self-love:before {
+    content: "\f104";
+}
+
+.flaticon-mental-health:before {
+    content: "\f105";
+}
+
+.flaticon-check:before {
+    content: "\f106";
+}
+
+.flaticon-love:before {
+    content: "\f107";
+}
+
+.flaticon-support:before {
+    content: "\f108";
+}
+
+.flaticon-complexity:before {
+    content: "\f109";
+}
+
+.flaticon-thinking:before {
+    content: "\f10a";
+}
+
+.flaticon-conversation:before {
+    content: "\f10b";
+}
+
+.flaticon-physical-therapy:before {
+    content: "\f10c";
+}
+
+.flaticon-winner:before {
+    content: "\f10d";
+}
+
+.flaticon-love-1:before {
+    content: "\f10e";
+}
+
+.flaticon-headphone:before {
+    content: "\f10f";
+}
+
+.flaticon-nursing-home:before {
+    content: "\f110";
+}
+
+.flaticon-charity:before {
+    content: "\f111";
+}
+
+.flaticon-choose:before {
+    content: "\f112";
+}
+
+.flaticon-personal-growth:before {
+    content: "\f113";
+}
+
+.flaticon-healthcare:before {
+    content: "\f114";
+}
+
+.flaticon-home:before {
+    content: "\f115";
+}
+
+.flaticon-nurse:before {
+    content: "\f116";
+}
+
+.flaticon-bus:before {
+    content: "\f117";
+}
+
+.flaticon-next:before {
+    content: "\f118";
+}
+
+.flaticon-medical-book:before {
+    content: "\f119";
+}
+
+.flaticon-elderly-care:before {
+    content: "\f11a";
+}
+
+.flaticon-house-1:before {
+    content: "\f11b";
+}
+
+.flaticon-nurse-1:before {
+    content: "\f11c";
+}
+
+.flaticon-school:before {
+    content: "\f11d";
+}
+
+.flaticon-toys:before {
+    content: "\f11e";
+}
+
+.flaticon-healthy-food:before {
+    content: "\f11f";
+}
+
+.flaticon-baby:before {
+    content: "\f120";
+}
+
+.flaticon-music:before {
+    content: "\f121";
+}
+
+.flaticon-pediatrics:before {
+    content: "\f122";
+}
+
+.flaticon-expert:before {
+    content: "\f123";
+}
+
+.flaticon-policy:before {
+    content: "\f124";
+}
+
+.flaticon-resources:before {
+    content: "\f125";
+}
+
+.flaticon-customer-engagement:before {
+    content: "\f126";
+}
+
+.flaticon-application:before {
+    content: "\f127";
+}
+
+.flaticon-list:before {
+    content: "\f128";
+}
+
+.flaticon-management:before {
+    content: "\f129";
+}
+
+.flaticon-placeholder:before {
+    content: "\f12a";
+}
+
+.flaticon-iphone:before {
+    content: "\f12b";
+}
+
+.flaticon-clock:before {
+    content: "\f12c";
+}
+
+.flaticon-phone-call:before {
+    content: "\f12d";
+}
+
+.flaticon-telephone:before {
+    content: "\f12e";
+}
+
+.flaticon-shopping-bag:before {
+    content: "\f12f";
+}

@@ -1,0 +1,126 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.3 Header Style 3
+/*----------------------------------------*/
+
+.header-3 {
+    &.header-sticky {
+        padding-right: 375px;
+        padding-left: 375px;
+
+        @media #{$x3l} {
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+
+        @media #{$xxl,$xl} {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        @media #{$xl} {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            padding: 10px;
+        }
+    }
+}
+
+.#{$theme-prifix}-header {
+    &-style-3 {
+        & .tp-main-menu {
+            &>nav {
+                &>ul {
+                    &>li {
+                        margin-right: 46px;
+
+                        & .tp-mega-menu {
+                            left: -270px;
+
+                            @media #{$xl} {
+                                left: -170px;
+                            }
+                        }
+
+                        &>a {
+                            padding: 37px 0;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        & .tp-header {
+            &-info {
+                &-bg {
+                    width: auto;
+                    background: none;
+                }
+
+                &-social {
+                    margin-left: 0;
+
+                    & a {
+                        margin-right: -4px;
+                        position: relative;
+                        padding: 14px 10px;
+
+                        &::before,
+                        &::after {
+                            position: absolute;
+                            width: 1px;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            content: "";
+                            background-color: #2e4352;
+                        }
+
+                        &::after {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+
+                &-text {
+                    @media #{$md} {
+                        margin-right: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        & #header-sticky {
+            @media #{$lg,$md,$sm,$xs} {
+                padding: 10px 0;
+            }
+        }
+        & .tp-header-bottom-right {
+            @media #{$lg,$md,$sm,$xs} {
+                padding: 0;
+            }
+        }
+    }
+
+    &-3{
+        &-one-page{
+            & .tp-main-menu {
+                &>nav {
+                    &>ul {
+                        &>li {
+                            margin-right: 36px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}

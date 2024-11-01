@@ -1,0 +1,106 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.8 Offcanvas
+/*----------------------------------------*/
+.#{$theme-prifix}-offcanvas {
+  position: fixed;
+  background: #fff;
+  width: 500px;
+  right: 0;
+  top: 0;
+  padding: 50px 40px;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  @include tp-transform(translateX(100%));
+  @include tp-transition(.3s);
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  z-index: 999;
+
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+    padding: 35px 30px;
+  }
+
+  &-open {
+    opacity: 1;
+    visibility: visible;
+    @include tp-transform(translateX(0));
+  }
+
+  &-close-toggle {
+    font-size: 29px;
+    color: var(--tp-heading-color);
+
+    &:hover {
+      color: var(--tp-theme-1);
+    }
+  }
+
+  &-header {
+    @media #{$lg,$md,$xs} {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-title {
+    font-size: 35px;
+  }
+
+  &-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  &-info {
+    & span {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 5px;
+      color: var(--tp-common-black);
+    }
+  }
+
+  &-sm-title {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  &-social {
+    & a {
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      line-height: 39px;
+      text-align: center;
+      border-radius: 40px;
+      display: inline-block;
+      color: var(--tp-heading-color);
+      border: 1px solid rgba(2, 11, 24, 0.1);
+      margin-right: 5px;
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.45s ease-in-out;
+    background: rgba(24, 24, 24, 0.4);
+
+    &-open {
+      opacity: 0.7;
+      visibility: visible;
+    }
+  }
+
+}

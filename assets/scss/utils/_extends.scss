@@ -1,0 +1,56 @@
+@use './mixins' as *;
+
+%include-bg{
+	@include tp-background();
+}
+
+%transition{
+	@include tp-transition();
+}
+
+// svg
+
+%svg-1{
+	@include tp-transform(translateY(-1px));
+}
+
+%svg-2{
+	@include tp-transform(translateY(-2px));
+}
+
+%svg-3{
+	@include tp-transform(translateY(-3px));
+}
+
+%svg-4{
+	@include tp-transform(translateY(-4px));
+}
+
+
+/* transform */
+%translateY2{
+	@include tp-transform(translateY(-50%));
+}
+%translateX2{
+	@include tp-transform(translateX(-50%));
+}
+%translate2{
+	@include tp-transform(translate(-50%, -50%));
+}
+
+
+// bg thumbnails
+%bg-thumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// Before After
+%tp-bfaf{
+	position: absolute;
+	content: '';
+}
+

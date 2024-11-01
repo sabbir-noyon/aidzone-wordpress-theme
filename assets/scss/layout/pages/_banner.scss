@@ -1,0 +1,78 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.10 Banner css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-banner {
+    &-item {
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 60px 0px rgba(34, 34, 67, 0.08);
+        @include tp-transition();
+
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            background: var(--tp-theme-1);
+
+            & .tp-banner {
+                &-content {
+                    &::after {
+                        background: var(--tp-theme-1);
+                    }
+                }
+
+                &-title {
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+
+    }
+
+    &-space {
+        margin-top: -120px;
+    }
+
+    &-content {
+        position: relative;
+        padding: 0 40px 0 60px;
+
+        @media #{$lg,$sm,$xs} {
+            padding: 0 30px 0 30px;
+        }
+
+        &::after {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: -30px;
+            top: 50%;
+            content: "";
+            transform: translateY(-50%);
+            background: var(--tp-common-white);
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            @include tp-transition();
+        }
+    }
+
+    &-title {
+        font-size: 30px;
+        font-weight: 700;
+
+        @media #{$lg} {
+            font-size: 24px;
+        }
+    }
+
+    &-thumb {
+        & img {
+            max-width: inherit;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+}

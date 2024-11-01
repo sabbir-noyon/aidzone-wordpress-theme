@@ -1,0 +1,182 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 Footer Style 3
+/*----------------------------------------*/
+
+.#{$theme-prifix}-footer {
+    &-4 {
+        & .tp-footer {
+            &-widget {
+                &-text {
+                    & p {
+                        & br {
+                            @media #{$lg,$sm,$xs} {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &-social {
+                    & ul {
+                        & li {
+                            margin-right: 5px;
+
+                            & a {
+                                width: 34px;
+                                height: 34px;
+                                line-height: 34px;
+                                text-align: center;
+                                display: inline-block;
+                                border-radius: 50%;
+                                background: #2f4454;
+                                @include tp-transition();
+
+                                &:hover {
+                                    color: var(--tp-common-black);
+                                    background: var(--tp-common-white);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-info {
+                    & span {
+                        font-size: 16px;
+                        font-weight: 500;
+                        display: block;
+                        margin-bottom: 8px;
+                    }
+
+                    & a {
+                        position: relative;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: var(--tp-common-white);
+                        display: inline-block;
+
+                        & span {
+                            position: absolute;
+                            font-size: 12px;
+                            font-weight: 500;
+                            padding: 0 8px;
+                            display: inline-block;
+                            border-radius: 15px;
+                            background: var(--tp-theme-1);
+                        }
+
+                        &::after {
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            bottom: 0;
+                            left: 0;
+                            content: "";
+                            opacity: 0;
+                            visibility: hidden;
+                            background: #9fa8ae;
+                            @include tp-transition();
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+
+
+                    }
+                }
+
+                &-gellery {
+                    &-thumb {
+                        margin-right: 10px;
+
+                        & a {
+                            position: relative;
+                            width: 80px;
+                            height: 80px;
+                            display: inline-block;
+                            border-radius: 15px;
+
+                            & span {
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 50%;
+                                text-align: center;
+                                color: var(--tp-common-white);
+                                transform: translateY(-50%);
+                                opacity: 0;
+                                visibility: hidden;
+                                @include tp-transition();
+
+                            }
+
+                            &::before {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                content: "";
+                                background: var(--tp-theme-1);
+                                border-radius: 15px;
+                                transform: scale(.5);
+                                opacity: 0;
+                                visibility: hidden;
+                                @include tp-transition();
+                            }
+
+                            & img {
+                                width: 100%;
+                                border-radius: 15px;
+                            }
+
+                            &:hover {
+                                &::before {
+                                    opacity: .8;
+                                    visibility: visible;
+                                    transform: scale(1);
+                                }
+
+                                & span {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &.footer-col-4 {
+                    &-2 {
+                        margin-left: -40px;
+
+                        @media #{$lg} {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        @media #{$md,$sm,$xs} {
+                            margin-left: 0;
+                        }
+                    }
+
+                    &-3 {
+                        margin-left: 10px;
+
+                        @media #{$md,$sm,$xs} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

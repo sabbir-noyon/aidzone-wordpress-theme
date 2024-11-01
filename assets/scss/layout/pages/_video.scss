@@ -1,0 +1,230 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.21 Video css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-video {
+    &-height {
+        min-height: 600px;
+        margin-top: -100px;
+
+        @media #{$xs} {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &-bg {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-space {
+        padding-top: 220px;
+
+        @media #{$sm} {
+            padding-top: 80px;
+        }
+        @media #{$xs} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &-overlay {
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            opacity: .6;
+            background-color: #071621;
+        }
+    }
+
+    &-title-box {
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 40px;
+        }
+
+        & .tp-section-title {
+            @media #{$xs} {
+                font-size: 38px;
+            }
+
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        & a {
+            position: relative;
+            width: 98px;
+            height: 98px;
+            font-size: 24px;
+            line-height: 98px;
+            text-align: center;
+            display: inline-block;
+            color: var(--tp-common-white);
+            border: 1px solid var(--tp-common-white);
+            border-radius: 50%;
+            z-index: 2;
+
+            &::before,
+            &::after {
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 80%;
+                width: 80%;
+                position: absolute;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 253, 0.45);
+                animation: borderanimate2 2s linear infinite;
+                z-index: -1;
+            }
+
+            &::after {
+                height: 75%;
+                width: 75%;
+                background-color: rgba(211, 211, 211, 0.4);
+                animation: borderanimate2 3s linear infinite;
+            }
+        }
+    }
+
+    &-shape {
+        position: absolute;
+        right: 170px;
+        bottom: 50px;
+        animation: spin-1 3000ms forwards infinite alternate;
+        transform-origin: top left;
+
+        @media #{$md,$sm,$xs} {
+            right: auto;
+            bottom: -30px;
+            left: 140px;
+            transform: rotate(-201deg);
+        }
+    }
+
+    &-inner {
+        @media #{$sm,$xs} {
+            padding-bottom: 80px;
+        }
+
+        &-height {
+            height: 700px;
+
+            @media #{$md} {
+                height: 600px;
+            }
+
+            @media #{$sm,$xs} {
+                height: 500px;
+            }
+        }
+
+        &-wrapp {
+            margin: 0 -120px;
+
+            @media #{$xxl} {
+                margin: 0 -50px;
+            }
+
+            @media #{$xl} {
+                margin: 0 -10px;
+            }
+
+            @media #{$lg,$md,$sm,$xs} {
+                margin: auto;
+            }
+        }
+
+        &-overlay {
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+                content: "";
+                border-radius: 15px;
+                background-color: rgb(34, 54, 69);
+                z-index: -1;
+            }
+        }
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -2;
+            border-radius: 15px;
+
+        }
+
+        &-text {
+            position: absolute;
+            bottom: -40px;
+            font-size: 150px;
+            font-weight: 800;
+            font-style: italic;
+            color: var(--tp-common-white);
+            text-wrap: nowrap;
+
+            @media #{$sm,$xs} {
+                bottom: -27px;
+                font-size: 90px;
+            }
+        }
+
+        &-icon {
+            & a {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                font-size: 24px;
+                line-height: 120px;
+                top: 50%;
+                left: 0;
+                right: 0;
+                border-radius: 50%;
+                text-align: center;
+                margin: auto;
+                display: inline-block;
+                color: var(--tp-common-black);
+                transform: translateY(-50%);
+                background: var(--tp-common-white);
+                z-index: 2;
+
+                &::before {
+                    background: rgba(255, 255, 255, 0.4);
+                }
+
+                &::after {
+                    background: rgba(255, 255, 255, 0.4);
+                }
+            }
+
+
+        }
+    }
+}

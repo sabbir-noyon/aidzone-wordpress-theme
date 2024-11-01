@@ -1,0 +1,38 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.13 Discover css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-discover {
+    & .tp-section {
+        &-meta {
+            &-notes {
+                & p {
+                    font-weight: 500;
+                    color: var(--tp-common-white);
+                }
+
+                &:hover {
+                    & .tp-section-meta {
+                        &-sm {
+                            color: var(--tp-common-white);
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-sm {
+                color: var(--tp-common-white);
+
+                &::after {
+                    background: var(--tp-common-white);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.15 Event css
+/*----------------------------------------*/
+.#{$theme-prifix}-events {
+    &-thumb {
+        flex: 0 0 auto;
+
+        & img {
+            @include tp-transition();
+            border-radius: 15px 0 0 15px;
+
+            @media #{$xs} {
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+            }
+
+        }
+    }
+
+    &-content {
+        padding: 40px 30px;
+        border-radius: 0 15px 15px 0;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 60px 0px rgba(24, 21, 51, 0.08);
+
+        @media #{$lg} {
+            padding: 67px 30px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 47px 30px;
+            border-radius: 0 0 15px 15px;
+        }
+        @media #{$xs} {
+            padding: 47px 15px;
+            border-radius: 0 0 15px 15px;
+        }
+    }
+
+    &-btn {
+        padding: 4px 20px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 50px;
+        display: inline-block;
+        background: var(--tp-theme-1);
+        color: var(--tp-common-white);
+        @include tp-transition();
+
+        &:hover {
+            color: var(--tp-common-white);
+            background: var(--tp-common-black);
+        }
+    }
+
+    &-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: inline-block;
+        color: var(--tp-common-black);
+        @include tp-transition();
+
+        @media #{$xl} {
+            font-size: 18px;
+        }
+
+        @media #{$sm} {
+            font-size: 17px;
+        }
+
+
+        &-box {
+            @media #{$sm,$xs} {
+                margin-bottom: 20px;
+            }
+
+            & .tp-section-title {
+                @media #{$xs} {
+                    font-size: 27px;
+                }
+            }
+
+            & p {
+                @media #{$sm,$xs} {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &:hover {
+            color: var(--tp-theme-1);
+        }
+    }
+
+    &-meta {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--tp-common-black);
+    }
+
+    &-active {
+        padding: 50px 0;
+    }
+
+    &-arrow {
+        &.tp-custom-arrow {
+            @media #{$md,$sm,$xs} {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.tp-plr-rs {
+        @media #{$sm,$xs} {
+            padding-top: 0;
+        }
+    }
+
+}

@@ -1,0 +1,299 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.1 Footer Style 1
+/*----------------------------------------*/
+
+.#{$theme-prifix}-footer {
+    &-style {
+        &-1 {
+            margin-top: -71px;
+        }
+
+        &-plr {
+            padding-top: 220px;
+            padding-bottom: 100px;
+
+            @media #{$xs} {
+                padding-bottom: 50px;
+            }
+        }
+    }
+
+    &-widget {
+        @media #{$xs} {
+            margin-bottom: 40px;
+        }
+
+        &-text {
+            margin-bottom: 25px;
+
+            & p {
+                font-weight: 600;
+                margin-right: 40px;
+                color: #9ca6ae;
+            }
+        }
+
+        &-contact {
+            font-weight: 600;
+            color: var(--tp-common-white);
+
+            & a {
+                font-size: 16px;
+                @include tp-transition();
+
+                &:hover {
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+
+        &-mail {
+
+            & a {
+                font-size: 16px;
+                font-weight: 600;
+                color: #9ca6ae;
+                @include tp-transition();
+
+                &:hover {
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+            display: inline-block;
+            color: var(--tp-common-white);
+            margin-bottom: 50px;
+
+            @media #{$xs} {
+                margin-bottom: 30px;
+            }
+
+            &-2 {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-menu {
+            & ul {
+                & li {
+                    list-style-type: none;
+                    margin-bottom: 12px;
+
+                    & a {
+                        position: relative;
+                        font-size: 16px;
+                        color: #9ca6ae;
+                        font-weight: 600;
+                        display: inline-block;
+                        @include tp-transition();
+
+                        &::before {
+                            position: absolute;
+                            width: 7px;
+                            height: 7px;
+                            top: 50%;
+                            left: -15px;
+                            content: "";
+                            opacity: 0;
+                            visibility: hidden;
+                            border-radius: 50%;
+                            @include tp-transition();
+                            transform: translateY(-50%);
+                            background: var(--tp-common-white);
+                        }
+
+                        &:hover {
+                            padding-left: 15px;
+                            color: var(--tp-common-white);
+
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-newslater {
+            & span {
+                font-size: 16px;
+                font-weight: 500;
+                display: block;
+                color: #9ca6ae;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-social {
+            & ul {
+                & li {
+                    list-style-type: none;
+                    display: inline-block;
+                    margin-right: 16px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    & a {
+                        font-size: 16px;
+                        @include tp-transition();
+
+                        &:hover {
+                            color: var(--tp-common-white);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.footer-col {
+            &-2 {
+                margin-left: -38px;
+
+                @media #{$md,$sm,$xs} {
+                    margin-left: 0;
+                }
+            }
+
+            &-3 {
+                @media #{$md,$sm} {
+                    margin-top: 30px;
+                }
+
+                @media #{$xs} {
+                    margin-left: 0;
+                }
+            }
+
+            &-4 {
+                margin-left: 70px;
+
+                @media #{$md,$sm,$xs} {
+                    margin-left: 0;
+                }
+
+                @media #{$md,$sm,$xs} {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    &-input {
+        position: relative;
+
+        & input {
+            height: 48px;
+            color: var(--tp-common-white);
+            background: none;
+            border: 1px solid #4f6473;
+            border-radius: 15px;
+            padding-left: 35px;
+            padding-right: 70px;
+
+            &::placeholder {
+                color: var(--tp-text-body);
+            }
+
+            &:focus {
+                border: 1px solid var(--tp-theme-1);
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: var(--tp-common-white);
+            margin-right: 16px;
+        }
+
+        &-action {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--tp-common-white);
+            background: var(--tp-theme-1);
+            border-radius: 15px;
+
+            & i {
+                transform: rotate(-30deg);
+                @include tp-transition();
+            }
+
+            &:hover {
+                & i {
+                    animation: tp-arrow 0.2s linear;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &-inner {
+        &-plr {
+            margin-top: -80px;
+        }
+    }
+}
+
+// copyright css
+
+.#{$theme-prifix}-copyright {
+    &-style {
+        background: #1c2e3c;
+
+        &-3 {
+            & .tp-copyright {
+                &-text {
+                    & p {
+                        color: var(--tp-text-body-2);
+                        margin-bottom: 0;
+
+                        & a {
+                            color: var(--tp-text-body-2);
+                        }
+                    }
+                }
+
+                &-privacy {
+                    & a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-right: 35px;
+                        color: var(--tp-text-body-2);
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-text {
+        & p {
+            font-weight: 500;
+
+            & a {
+                color: var(--tp-common-white);
+            }
+        }
+    }
+}

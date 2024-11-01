@@ -1,0 +1,322 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2 Header Style 2
+/*----------------------------------------*/
+.header-sticky {
+    &.header-2 {
+        padding-right: 120px;
+        padding-left: 120px;
+
+        @media #{$x3l} {
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+
+        @media #{$xxl,$xl} {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        @media #{$xl} {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        @media #{$lg} {
+            padding: 10px;
+        }
+        @media #{$md,$sm,$xs} {
+            padding: 0;
+        }
+    }
+
+}
+
+.#{$theme-prifix}-header {
+    &-style-2 {
+
+        &-plr {
+            padding-right: 120px;
+            padding-left: 120px;
+
+            @media #{$x3l} {
+                padding-right: 70px;
+                padding-left: 70px;
+            }
+
+            @media #{$xxl,$xl} {
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+
+            @media #{$xl} {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            @media #{$lg} {
+                padding: 10px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                padding: 0;
+            }
+        }
+
+        & .tp-header {
+            &-bottom {
+                &-btn {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+
+                &-action {
+                    margin-left: 30px;
+
+                    @media #{$xl} {
+                        margin-left: 15px;
+                    }
+
+                    @media #{$sm} {
+                        margin-left: 0;
+                    }
+
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+
+                &-btn {
+                    & .tp-theme-btn {
+                        padding: 12px 43px;
+                        @media #{$md,$sm,$xs} {
+                            padding: 12px 30px;
+                        }
+                    }
+                }
+
+                &-right {
+                    & ul {
+                        & li {
+                            @include tp-transition();
+
+                            &:hover {
+                                color: var(--tp-theme-1);
+                            }
+
+                            &:first-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-info {
+                padding: 11px 0;
+
+                &-text {
+                    font-size: 16px;
+                    color: var(--tp-common-white);
+                    margin-bottom: 0;
+
+                    & a {
+                        & i {
+                            color: var(--tp-common-white);
+                            margin-right: 5px;
+                            @include tp-transition();
+                        }
+                    }
+
+                    &:hover {
+                        & a {
+                            color: var(--tp-theme-1);
+
+                            & i {
+                                color: var(--tp-common-white)
+                            }
+                        }
+                    }
+
+                    &.first-info {
+                        & a {
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                width: 100%;
+                                height: 1px;
+                                left: 0;
+                                bottom: 1.5px;
+                                content: "";
+                                background: #596874;
+                            }
+                        }
+                    }
+                }
+
+                &-center {
+                    margin-right: 60px;
+
+                    @media #{$xxl} {
+                        margin-right: 30px;
+                    }
+
+                    @media #{$xl} {
+                        margin-right: 20px;
+                    }
+                }
+
+                &-bg {
+                    width: 600px;
+                    padding: 15px 0;
+                    background: #192b38;
+                    border-radius: 30px;
+
+                    @media #{$xxl,$xl} {
+                        width: auto;
+                    }
+                }
+
+                &-social {
+                    margin-left: 32px;
+
+                    @media #{$xl} {
+                        margin-left: 20px;
+                    }
+
+                    @media #{$xs} {
+                        margin-left: 10px;
+                    }
+
+                    & a {
+                        font-size: 16px;
+                        margin-right: 15px;
+                        padding: 20px 0;
+                        @include tp-transition();
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        &:hover {
+                            color: var(--tp-common-white);
+                        }
+                    }
+                }
+            }
+
+            &-lang {
+                position: absolute;
+                width: 54px;
+                right: -23px;
+                top: 4px;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 1px 10px;
+                color: var(--tp-common-black);
+                background-color: var(--tp-common-white);
+                cursor: pointer;
+
+                @media #{$xl} {
+                    right: 0;
+                }
+
+                &-thumb {
+                    width: 52px;
+                    height: 52px;
+                    margin-left: 30px;
+
+                    @media #{$xl} {
+                        margin-left: 15px;
+                    }
+                }
+
+                &-list {
+                    position: absolute;
+                    top: 33px;
+                    right: -24px;
+                    z-index: 11;
+                    padding: 15px 15px;
+                    min-width: 100px;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include tp-transition();
+                    background-color: var(--tp-common-white);
+
+                    @media #{$xl} {
+                        right: -15px;
+                    }
+
+                    & li {
+                        margin-left: 0;
+                        cursor: pointer;
+                    }
+
+                    &.tp-lang-list-open {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                &-icon {
+                    position: absolute;
+                    top: 5px;
+                    right: -16px;
+
+                    @media #{$xl} {
+                        right: -8px;
+                    }
+
+                    & i {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: var(--tp-common-black);
+                    }
+                }
+            }
+
+            &-top-wrapp {
+                border: 0;
+            }
+        }
+
+        & .tp-main-menu {
+            &>nav {
+                &>ul {
+                    &>li {
+                        @media #{$x3l} {
+                            margin-right: 60px;
+                        }
+                        & .tp-mega-menu {
+                            left: -170px;
+                        }
+
+                        @media #{$xxl} {
+                            margin-right: 45px;
+                        }
+
+                        @media #{$xl} {
+                            margin-right: 35px;
+                        }
+
+                        &>a {
+                            padding: 37px 0;
+                        }
+                    }
+                }
+            }
+
+            &-bars {
+                margin-left: 0;
+
+                @media #{$lg,$md,$sm,$xs} {
+                    margin-top: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

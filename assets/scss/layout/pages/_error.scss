@@ -1,0 +1,59 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 Error css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-error {
+    @media #{$sm,$xs} {
+        padding-bottom: 90px;
+    }
+    &-title {
+        font-size: 360px;
+        font-weight: 700;
+        color: var(--tp-common-black);
+
+        @media #{$md} {
+            font-size: 320px;
+        }
+
+        @media #{$sm} {
+            font-size: 180px;
+        }
+
+        @media #{$xs} {
+            font-size: 140px;
+        }
+
+        & span {
+            margin-left: 12px;
+            margin-bottom: 0;
+            display: inline-block;
+            animation: moving 3s infinite;
+
+            @media #{$sm} {
+                width: 30%;
+            }
+
+            @media #{$xs} {
+                width: 40%;
+            }
+        }
+
+        &-box {
+            & .tp-section-title {
+                @media #{$md} {
+                    font-size: 45px;
+                }
+
+                @media #{$sm} {
+                    font-size: 30px;
+                }
+
+                @media #{$xs} {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
