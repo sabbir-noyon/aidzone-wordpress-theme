@@ -105,7 +105,7 @@
 
 .tagcloud {
     & a {
-        font-size: 14px;
+        font-size: 14px !important;
         padding: 5px 13px;
         border-radius: 15px;
         margin-right: 8px;
@@ -118,6 +118,45 @@
             color: var(--tp-common-white);
             background-color: var(--tp-theme-1);
             border: 1px solid var(--tp-theme-1);
+        }
+    }
+}
+
+
+.sidebar-widget.widget_categories {
+    & ul {
+        & li {
+            position: relative;
+            display: block;
+    
+            & a {
+                font-size: 16px;
+                font-weight: 700;
+                padding: 20px 30px;
+                color: var(--tp-common-black);
+                display: block;
+                @include tp-transition();
+                border-radius: 15px;
+                position: relative;
+                &:after{
+                    content: "\f061";
+                    font-family: "Font Awesome 6 Pro";
+                    font-weight: 400;
+                    float: right;
+                }
+                & i {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+    
+                &:hover {
+                    color: var(--tp-theme-1);
+                    background: var(--tp-common-white);
+                    box-shadow: 0px 4px 20px 0px rgba(30, 22, 22, 0.06);
+                }
+            }
         }
     }
 }

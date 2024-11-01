@@ -1,6 +1,6 @@
 <?php
 
-
+// header_logo
 function header_logo(){ 
     $logo_url = get_theme_mod('logo_url', get_template_directory_uri().'/assets/img/logo/logo.png');   
     ?>
@@ -10,6 +10,27 @@ function header_logo(){
     <?php
 }
 
+// header_search_logo
+function header_search_logo(){ 
+    $logo_search = get_theme_mod('logo_search', get_template_directory_uri().'/assets/img/logo/logo-white.png');   
+    ?>
+
+    <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo esc_url($logo_search); ?>" alt=""></a>
+
+    <?php
+}
+
+
+function aidzone_footer_copyright(){ 
+    $footer_copyright_text = get_theme_mod('footer_copyright', __('Full Copyright & Design By @Theme pure','aidzone'));    
+    ?>
+        <p><?php echo esc_html($footer_copyright_text); ?></p>
+
+<?php
+}
+
+
+// aidzone_header_social
 function aidzone_header_social(){ 
     $fb_url = get_theme_mod('fb_url', '#');
     $tw_url = get_theme_mod('tw_url', '#');
@@ -50,4 +71,33 @@ function aidzone_menu(){
         ) 
     ); 
 
+}
+
+// aidzone blog pagination 
+function aidzone_pagination(){
+    $pages = paginate_links( array( 
+        'type' => 'array',
+        'prev_text'    => __('<i class="fa-regular fa-arrow-left icon"></i>','aidzone'),
+        'next_text'    => __('<i class="fa-regular fa-arrow-right icon"></i>','aidzone'),
+    ) );
+        if( $pages ) {
+        echo '<nav><ul>';
+        foreach ( $pages as $page ) {
+            echo "<li>$page</li>";
+        }
+        echo '</ul></nav>';
+    }
+}
+
+
+function aidzone_tag(){
+    $aidzone_tags = get_the_tags(); 
+
+    
+    
+    foreach($aidzone_tags as $aidzone_tag) { 
+        ?>
+        <a href="<?php echo get_tag_link($aidzone_tag); ?>"><?php echo esc_html($aidzone_tag->name); ?></a>
+        <?php 
+    }
 }

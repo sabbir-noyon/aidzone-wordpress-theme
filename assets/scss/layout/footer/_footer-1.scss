@@ -297,3 +297,46 @@
         }
     }
 }
+
+
+.tp-footer-widget ul.menu {
+    & li {
+        list-style-type: none;
+        margin-bottom: 12px;
+
+        & a {
+            position: relative;
+            font-size: 16px;
+            color: #9ca6ae;
+            font-weight: 600;
+            display: inline-block;
+            @include tp-transition();
+
+            &::before {
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                top: 50%;
+                left: -15px;
+                content: "";
+                opacity: 0;
+                visibility: hidden;
+                border-radius: 50%;
+                @include tp-transition();
+                transform: translateY(-50%);
+                background: var(--tp-common-white);
+            }
+
+            &:hover {
+                padding-left: 15px;
+                color: var(--tp-common-white);
+
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

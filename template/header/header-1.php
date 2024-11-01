@@ -7,6 +7,9 @@
     $button_url = get_theme_mod('button_url', __('#','aidzone'));
 
     $email_id = get_theme_mod('email_id', __('needhelp@mail.com','aidzone'));
+
+    $header_topbar = get_theme_mod('header_topbar', true);
+
 ?>
 
 
@@ -15,7 +18,7 @@
     <!-- header area start -->
     <div class="tp-header-area tp-header-style-2 tp-header-style-3">
         <div class="tp-header-wrapp">
-
+        <?php if($header_topbar) : ?>
         <div class="tp-header-top-area black-bg d-none d-md-block">
             <div class="container">
                 <div class="tp-header-top-wrapp">
@@ -49,7 +52,7 @@
                 </div>
             </div>
         </div>
-
+        <?php endif; ?>                        
         <div class="tp-header-bottom-area white-bg">
             <div id="header-sticky" class="tp-header-bottom-area header-3">
                 <div class="container">

@@ -47,7 +47,7 @@ class Aidzone_Walker_Nav_Menu extends Walker {
 		$indent = str_repeat( $t, $depth );
 
 		// Default class.
-		$classes = array( 'sub-menu hello-submenu' );
+		$classes = array( 'sub-menu' );
 
 		/**
 		 * Filters the CSS class(es) applied to a menu list element.
@@ -137,11 +137,11 @@ class Aidzone_Walker_Nav_Menu extends Walker {
 		$classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
 		$classes[] = 'menu-item-' . $menu_item->ID;
         // if we need li custom class
-		// $classes[] = 'menu-li-custom-class';
+		// $classes[] = 'tp-custom-class';
 
         // if html li has custom dropdown class 
         // if($args->walker->has_children == true) {
-		//     $classes[] = 'custom-dropdown-menu-class';
+		//     $classes[] = 'my-dropdown-menu-parent';
         // }
 
 		/**

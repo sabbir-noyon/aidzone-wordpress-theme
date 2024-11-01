@@ -8,3 +8,21 @@ Text Domain: aidzone
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
+
+.postbox-comment-avater img {
+	border-radius: 100%;
+}
+
+#reply-title a {
+    color: var(--tp-theme-1);
+    font-size: 17px;
+    margin-left: 10px;
+  }
+  #reply-title {
+	font-size: 36px;
+	font-weight: 800;
+	color: var(--tp-common-black);
+}
+  .postbox-comment ul li .children{
+        margin-left: 100px;
+  }

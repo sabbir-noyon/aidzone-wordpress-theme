@@ -4,7 +4,7 @@ get_header();
 ?>
 
 
-<section id="postbox" class="postbox-area tp-plr-rs pt-120 pb-80">
+<section id="postbox" class="postbox-single-area postbox-area tp-plr-rs pt-120 pb-80">
     <div class="container">
         <div class="row">
             <div class="col-xxl-8 col-xl-8 col-lg-8">
@@ -12,12 +12,17 @@ get_header();
                 <?php if ( have_posts() ) : ?>
                     <?php while ( have_posts() ) : the_post(); ?>    
                         <?php echo get_template_part('template/content', get_post_format()); ?>
-                    <?php endwhile; ?>
-                <?php endif; ?>
 
-                <div class="basic-pagination">
-                    <?php aidzone_pagination(); ?>
-                </div>
+
+                        <?php echo get_template_part('template/biography'); ?>
+
+
+                        <?php if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif; ?>
+
+                    <?php endwhile; ?>
+                <?php endif; ?>   
 
                 </div>
             </div>
@@ -29,8 +34,6 @@ get_header();
         </div>
     </div>
 </section>
-
-
 
 
 <?php 

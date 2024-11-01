@@ -404,4 +404,20 @@
 		}
 	});
 
+
+
+	// 12. team-3
+	var blogFormatSwiper = new Swiper('.tp-blog-format-active', {
+		speed: 1000,
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoplay: false,
+		effect: 'slide',
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+
 })(jQuery);

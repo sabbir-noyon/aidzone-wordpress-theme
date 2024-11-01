@@ -9,7 +9,7 @@
             display: inline-block;
             margin-right: 8px;
 
-            & a {
+            & a, & span {
                 width: 38px;
                 height: 38px;
                 line-height: 38px;
@@ -24,15 +24,10 @@
                     color: var(--tp-common-white);
                     background: var(--tp-common-black);
                 }
-
-                & .current {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 200px;
-                    display: inline-block;
-                    color: var(--tp-common-white);
-                    background: var(--tp-common-black);
-                }
+            }
+            & .current {
+                color: var(--tp-common-white);
+                background: var(--tp-common-black);
             }
         }
     }

@@ -11,6 +11,7 @@ new \Kirki\Panel(
 
 
 function header_info_section(){
+
     new \Kirki\Section(
         'header_section_id',
         [
@@ -20,6 +21,20 @@ function header_info_section(){
             'priority'    => 160,
         ]
     );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'header_topbar',
+            'label'       => esc_html__( 'Header Topbar Switch', 'kirki' ),
+            'description' => esc_html__( 'Header topbar on/off switch', 'kirki' ),
+            'section'     => 'header_section_id',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Enable', 'kirki' ),
+                'off' => esc_html__( 'Disable', 'kirki' ),
+            ],
+        ]
+    );    
 
     new \Kirki\Field\Text(
         [
@@ -52,6 +67,16 @@ function header_info_section(){
 
     new \Kirki\Field\Text(
         [
+            'settings' => 'phone',
+            'label'    => esc_html__( 'Phone', 'aidzone' ),
+            'section'  => 'header_section_id',
+            'default'  => esc_html__( '+ 4 20 7700 1007', 'aidzone' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
             'settings' => 'button_text',
             'label'    => esc_html__( 'Button', 'aidzone' ),
             'section'  => 'header_section_id',
@@ -65,6 +90,17 @@ function header_info_section(){
             'label'    => esc_html__( 'Button URL', 'aidzone' ),
             'section'  => 'header_section_id',
             'default'  => esc_html__( '#', 'aidzone' ),
+            'priority' => 10,
+        ]
+    );
+
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'offcanvas_instagram_shortcode',
+            'label'    => esc_html__( 'Offcanvas Instagram Shortcode', 'aidzone' ),
+            'section'  => 'header_section_id',
+            'default'  => esc_html__( 'please insert your shorcode', 'aidzone' ),
             'priority' => 10,
         ]
     );
@@ -128,7 +164,7 @@ function header_social_section(){
 header_social_section();
 
 
-
+// logo 
 function header_logo_section(){
     new \Kirki\Section(
         'header_logo_section',
@@ -149,7 +185,43 @@ function header_logo_section(){
             'default'     =>  get_template_directory_uri().'/assets/img/logo/logo.png',
         ]
     );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'logo_search',
+            'label'       => esc_html__( 'Logo Search', 'aidzone' ),
+            'description' => esc_html__( 'Please upload your search logo here', 'aidzone' ),
+            'section'     => 'header_logo_section',
+            'default'     =>  get_template_directory_uri().'/assets/img/logo/logo-white.png',
+        ]
+    );
     
  
 }
 header_logo_section();
+
+// logo 
+function footer_section(){
+    new \Kirki\Section(
+        'footer_section',
+        [
+            'title'       => esc_html__( 'Footer', 'aidzone' ),
+            'description' => esc_html__( 'My Footer Description.', 'aidzone' ),
+            'panel'       => 'aidzone_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'footer_copyright',
+            'label'    => esc_html__( 'Copyright Text', 'aidzone' ),
+            'section'  => 'footer_section',
+            'default'  => esc_html__( 'Full Copyright & Design By @Theme pure', 'aidzone' ),
+            'priority' => 10,
+        ]
+    );
+
+
+}
+footer_section();
